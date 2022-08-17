@@ -83,9 +83,3 @@ dotnet script switch.csx
 * [C#6 Dictionary Indexed Initializers](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/object-and-collection-initializers#collection-initializers)
 * [C#7 Tuples](https://docs.microsoft.com/en-us/dotnet/csharp/tuples)
 
-
-## Powershell
-
-### Platform
-
-* [Debugging PowerShell script in Visual Studio Code](https://devblogs.microsoft.com/scripting/debugging-powershell-script-in-visual-studio-code-part-1/)

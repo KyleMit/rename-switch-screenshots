@@ -53,7 +53,7 @@ var filesPaths = Directory.GetFiles(inputPath, "*.*", SearchOption.AllDirectorie
 
 var files = filesPaths.Select(fullPath => {
     var fileName = Path.GetFileName(fullPath);
-    
+
     var filePartsRgx = new Regex(@"(\d*)0[012]-(.*)\.");
     var fileParts = filePartsRgx.Match(fileName);
     var timestamp = fileParts.Groups[1].Value;
@@ -88,7 +88,7 @@ foreach (var gameName in gameHexLookup.Values)
 foreach (var fileInfo in files)
 {
     var sourcePath = fileInfo.fullPath;
-    
+
     var gameName =  gameHexLookup[fileInfo.gameHex];
     var dateString = fileInfo.fileDate.ToString("yyyy-MM-dd hh꞉mm꞉ss tt");
     var fileExt = Path.GetExtension(sourcePath);
@@ -104,7 +104,7 @@ foreach (var fileInfo in files)
 
 
 string SafeFileMove(string sourceFilePath, string destFilePath) {
-    
+
     var destFileDir = Path.GetDirectoryName(destFilePath);
     var destFileName = Path.GetFileNameWithoutExtension(destFilePath);
     var destFileExt = Path.GetExtension(destFilePath);
@@ -112,7 +112,7 @@ string SafeFileMove(string sourceFilePath, string destFilePath) {
     var safeDestFilePath = destFilePath;
 
 
-    // on collion append #
+    // on collision append #
     var i = 1;
     while (File.Exists(safeDestFilePath)) {
         var safeFileName = $"{destFileName} ({i}){destFileExt}";
